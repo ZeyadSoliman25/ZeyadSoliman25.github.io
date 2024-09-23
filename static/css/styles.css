@@ -28,7 +28,7 @@ main {
 }
 
 .logo {
-    font-size: 2rem; /* Large font size for visibility */
+    font-size: 2rem; /* Large font size for visibility  */
     color: white; /* White color for contrast */
     font-family: 'The Amsterdam', sans-serif;                                        
     position: absolute;
