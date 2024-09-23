@@ -1,319 +1,397 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    background-image: url(../images/Background_image.jpg); /* Update the path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif; 
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-image: url(../images/Background_image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }
 
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Keep the header above other content */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Keep the header above other content */
 }
 
 main {
-    padding-top: 60px; /* Make room for the fixed header */
-    transition: opacity 0.5s ease-out;
+  padding-top: 60px; /* Make room for the fixed header */
+  transition: opacity 0.5s ease-out;
 }
 
 .logo {
-    font-size: 2rem; /* Large font size for visibility  */
-    color: white; /* White color for contrast */
-    font-family: 'The Amsterdam', sans-serif;                                        
-    position: absolute;
-    top: 0px;
-    left: 40px;
-    text-decoration: none; 
-    z-index: 1000; /* Make sure it's above other elements */
+  font-size: 2rem; /* Large font size for visibility  */
+  color: white; /* White color for contrast */
+  font-family: "The Amsterdam", sans-serif;
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  text-decoration: none;
+  z-index: 1000; /* Make sure it's above other elements */
 }
 
 nav {
-    width: 70%;
-    position: Fixed;
-    top: 21px;
-    left:400px;
-    padding-top: 20px; /* Adjust padding to make space for the line */
+  width: 70%;
+  position: Fixed;
+  top: 21px;
+  left: 400px;
+  padding-top: 20px; /* Adjust padding to make space for the line */
 }
 
 nav ul li.active a {
-    background-color: #808080; /* Grey color for the active tab */
-    border-radius: 20px; /* Rounded corners for the oval shape */
-    padding: 10px 20px; /* Padding for aesthetic spacing */
+  background-color: #808080; /* Grey color for the active tab */
+  border-radius: 20px; /* Rounded corners for the oval shape */
+  padding: 10px 20px; /* Padding for aesthetic spacing */
 }
 
 nav::before {
-    content: '';
-    position: absolute;
-    top: 49px; /* Position at the top of the nav */
-    left: -450px;
-    width: 420px; /* Take full width minus logo width */
-    height: 2px; /* Height of the line */
-    background-color: white; /* Color of the line */
-    z-index: 999;
+  content: "";
+  position: absolute;
+  top: 49px; /* Position at the top of the nav */
+  left: -450px;
+  width: 420px; /* Take full width minus logo width */
+  height: 2px; /* Height of the line */
+  background-color: white; /* Color of the line */
+  z-index: 999;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 20px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 20px 0;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #60af4c; /* Change hover color */
+  color: #60af4c; /* Change hover color */
 }
 
 .welcome-area h1 {
-    color: white;
-    font-size: 2.5rem; 
-    text-align: center;
-    margin-top: 50px; 
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .welcome-area p {
-    color: white;
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .content-section {
-    display: none; 
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
 .content-section.active {
-    display: block; 
-    opacity: 1;
-    position: fixed;
-    top: 220px;
-    left: 600px;
+  display: block;
+  opacity: 1;
+  position: fixed;
+  top: 220px;
+  left: 600px;
 }
 
-.content-section.active h1{
-    color: white;
-    font-size: 2.5rem; 
-    text-align: center;
-    margin-top: 50px; 
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+.content-section.active h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.content-section.active p{
-    color: white;
-    font-size: 1.2rem;
-    text-align: center, justify;
-    margin-top: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+.content-section.active p {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center, justify;
+  margin-top: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.profile-pic img{
-    position: fixed; 
-    top: 200px;
-    left: 100px; 
-    width: 350px; /* Adjust according to your preference */
-    height: 350px;
-    border-radius: 300px; /* Circular image */
+.profile-pic img {
+  position: fixed;
+  top: 200px;
+  left: 100px;
+  width: 350px; /* Adjust according to your preference */
+  height: 350px;
+  border-radius: 50%; /* Circular image */
 }
 
 .selected-projects {
-    width: 80%;
-    margin: 20px auto;
-    color: white;
-    display: none; 
-    opacity: 0;
-    transition: opacity 0.5s ease-in; 
+  width: 80%;
+  margin: 20px auto;
+  color: white;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
-.selected-projects h1{
-    position: fixed;
-    top: 100px;
-    left: 50px;
+.selected-projects h1 {
+  position: fixed;
+  top: 100px;
+  left: 50px;
 }
 
 .selected-projects.active {
-    display: block; 
-    opacity: 1;
-} 
+  display: block;
+  opacity: 1;
+}
 
 .project-item1 {
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-    margin: 10px 0px;
-    width: 46%;
-    padding: 0px;
-    border-radius: 10px;
-    transition: background 0.3s ease;
-    position: fixed;
-    top: 200px;
-    left: 40px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  margin: 10px 0px;
+  width: 46%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  position: fixed;
+  top: 200px;
+  left: 40px;
 }
 
 .project-item1:hover {
-    background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+  background: rgba(0, 0, 0, 0.5); /* Darker on hover */
 }
 
 .project-item2 {
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-    margin: 10px 0;
-    width: 46%;
-    padding: 0px;
-    border-radius: 10px;
-    transition: background 0.3s ease;
-    position: fixed;
-    top: 200px;
-    left: 750px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  margin: 10px 0;
+  width: 46%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  position: fixed;
+  top: 200px;
+  left: 750px;
 }
 
 .project-item2:hover {
-    background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+  background: rgba(0, 0, 0, 0.5); /* Darker on hover */
 }
 
 .project-item3 {
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-    margin: 10px 0;
-    width:46%;
-    padding: 0px;
-    border-radius: 10px;
-    transition: background 0.3s ease;
-    position: fixed;
-    top: 400px;
-    left: 40px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  margin: 10px 0;
+  width: 46%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  position: fixed;
+  top: 400px;
+  left: 40px;
 }
 
 .project-item3:hover {
-    background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+  background: rgba(0, 0, 0, 0.5); /* Darker on hover */
 }
 
 .project-item4 {
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-    margin: 10px 0;
-    width: 46%;
-    padding: 0px;
-    border-radius: 10px;
-    transition: background 0.3s ease;
-    position: fixed;
-    top: 400px;
-    left: 750px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  margin: 10px 0;
+  width: 46%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  position: fixed;
+  top: 400px;
+  left: 750px;
 }
 
 .project-item4:hover {
-    background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+  background: rgba(0, 0, 0, 0.5); /* Darker on hover */
 }
 
 .project-number {
-    background:  #68af4c; /* White circle background */
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    padding: 10px;
-    font-size: 1.5rem;
-    position: relative;
-    top:50px;
-    left: 5px;
+  background: #68af4c; /* White circle background */
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+  font-size: 1.5rem;
+  position: relative;
+  top: 50px;
+  left: 5px;
 }
 
 .project-info h3 {
-    font-size: 1.5rem;
-    text-align: center;
-
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .project-info p {
-    font-size: 1rem;
-    text-align: center;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .more-projects {
-    display: block;
-    background: #68af4c;
-    color: white;
-    text-decoration: none;
-    padding: 20px 20px;
-    margin-top: 5px;
-    border-radius: 20px;
-    transition: background 0.3s ease;
-    text-align: center;
-    position: fixed;
-    top: 600px;
-    left: 590px;
+  display: block;
+  background: #68af4c;
+  color: white;
+  text-decoration: none;
+  padding: 20px 20px;
+  margin-top: 5px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+  text-align: center;
+  position: fixed;
+  top: 600px;
+  left: 590px;
 }
 
 .more-projects:hover {
-    background: #3a8b5e57; /* Darker green on hover */
+  background: #3a8b5e57; /* Darker green on hover */
 }
 
-.fade-in-content { 
-    animation: fadeIn 5s; 
-    -webkit-animation: fadeIn 5s;
-    -moz-animation: fadeIn 5s;
-    -o-animation: fadeIn 5s;
-    -ms-animation: fadeIn 5s;
+.internships {
+  width: 80%;
+  margin: 20px auto;
+  color: white;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.internships h1 {
+  position: fixed;
+  top: 100px;
+  left: 50px;
+}
+
+.internships.active {
+  display: block;
+  opacity: 1;
+}
+
+.intern1 {
+  margin: 10px 0px;
+  width: 40%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  text-align: center;
+  position: fixed;
+  top: 200px;
+  left: 40px;
+}
+
+.intern-info h3 {
+  font-size: 1.5rem;
+}
+
+.intern-info p {
+  font-size: 1rem;
+}
+
+.arrow {
+  position: fixed;
+  top: 300px;
+  left: 550px;
+}
+
+.intern2 {
+  margin: 10px 0px;
+  width: 40%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  text-align: center;
+  position: fixed;
+  top: 200px;
+  left: 800px;
+}
+
+.fade-in-content {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        padding: 20px;
-    }
-    
-    nav ul li {
-        margin-bottom: 10px; /* Space out links */
-    }
+  nav ul {
+    flex-direction: column;
+    padding: 20px;
+  }
 
-    .welcome-area h1 {
-        font-size: 2rem; /* Smaller font size for smaller screens */
-    }
-    
-    .welcome-area p {
-        font-size: 1rem; /* Smaller font size for smaller screens */
-    }
+  nav ul li {
+    margin-bottom: 10px; /* Space out links */
+  }
+
+  .welcome-area h1 {
+    font-size: 2rem; /* Smaller font size for smaller screens */
+  }
+
+  .welcome-area p {
+    font-size: 1rem; /* Smaller font size for smaller screens */
+  }
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-  
+
 @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-  
+
 @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-  
+
 @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-  
+
 @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
