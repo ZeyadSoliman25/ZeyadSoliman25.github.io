@@ -4,7 +4,7 @@ body, html {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    background-image: url('static/assets/Background_image.jpg'); 
+    background-image: url('../assets/Background_image.jpg'); /* Update the path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
