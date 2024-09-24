@@ -101,7 +101,6 @@ nav ul li a:hover {
 }
 
 .content-section {
-  display: none;
   opacity: 0;
   transition: opacity 0.5s ease-in;
 }
@@ -109,12 +108,12 @@ nav ul li a:hover {
 .content-section.active {
   display: block;
   opacity: 1;
-  position: fixed;
-  top: 220px;
-  left: 600px;
 }
 
-.content-section.active h1 {
+.content-section h1 {
+  position: relative;
+  top: -80px;
+  left: 250px;
   color: white;
   font-size: 2.5rem;
   text-align: center;
@@ -123,20 +122,31 @@ nav ul li a:hover {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.content-section.active p {
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  top: 0px;
+  left:50px;
+}
+
+.about-info p {
+  width: 60%;
+  position: relative;
+  top: -50px;
+  left: 520px;
   color: white;
   font-size: 1.2rem;
-  text-align: center, justify;
+  text-align: center;
   margin-top: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .profile-pic img {
-  position: fixed;
+  position: relative;
   top: 200px;
-  left: 100px;
-  width: 350px; /* Adjust according to your preference */
-  height: 350px;
+  width: 35%; /* Adjust according to your preference */
+  height: 35%;
   border-radius: 50%; /* Circular image */
 }
 
@@ -323,6 +333,12 @@ nav ul li a:hover {
   left: 800px;
 }
 
+.intern-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
 .fade-in-content {
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
@@ -379,18 +395,18 @@ nav ul li a:hover {
 /* Extra small devices (phones, less than 600px) */
 @media (max-width: 600px) {
   .logo {
-    font-size: 1.5rem; /* Smaller font size */
+    font-size: 0.1rem; /* Smaller font size */
     left: 20px; /* Adjusted positioning */
   }
 
   nav {
     width: 100%; /* Full width for phones */
     left: 0;
-    padding-top: 10px;
+    padding-top: 40px;
   }
 
   nav ul {
-    flex-direction: column; /* Stack menu vertically */
+    font-size: 0.6rem;
     padding: 10px;
   }
 
@@ -399,41 +415,125 @@ nav ul li a:hover {
   }
 
   .welcome-area h1 {
-    font-size: 1.8rem; /* Smaller heading for small screens */
+    font-size: 0.7rem; /* Smaller heading for small screens */
   }
 
   .welcome-area p {
-    font-size: 1rem; /* Smaller paragraph text */
+    font-size: 0.5rem; /* Smaller paragraph text */
   }
 
-  .profile-pic img {
-    top: 150px;
-    left: 50px;
-    width: 200px; /* Adjusted image size */
+  .content-section h1 {
+    font-size: 0.8rem;
+  }
+
+  .flex-container {
     height: 200px;
+    width: 200px;
+  }
+
+  .about-info p{
+    width: 40%;
+    font-size: 0.5rem;
+  }
+
+  .profile-pic {
+    flex-shrink: 100;
+  }
+
+  .selected-projects {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 0 auto; /* Centered */
+    padding: 20px; /* Add padding for spacing */
+  }
+
+  .selected-projects h1 {
+    position: relative;
+    top: 10px;
+    left: 0; /* Center title on small screens */
+    text-align: center;
+    font-size: 1rem;
   }
 
   .project-item1, .project-item2, .project-item3, .project-item4 {
-    width: 90%; /* Full width for projects on small screens */
-    left: 5%;
+    width: 90%; /* Full width for project items */
+    position: relative; /* Relative positioning for better control */
     top: auto;
-    position: relative;
-    margin: 20px auto;
+    left: auto;
+    margin: 15px auto; /* Center and add spacing between items */
+  }
+
+  .project-item1 {
+    margin-top: 40px; /* Add some space at the top */
+  }
+
+  /* Stack items vertically */
+  .project-item2, .project-item3, .project-item4 {
+    margin-top: 15px; /* Vertical spacing between project items */
   }
 
   .more-projects {
+    display: contents;
+    width: 90%; /* Full width for the button */
+    top: 50px;
+    left: auto;
+    margin: 5px auto; /* Add margin to center and space it out */
+    block-size: 5px;
+    border-width: 5px;
+  }
+
+  .project-info h3 {
+    font-size: 0.7rem;
+  }
+  
+  .project-info p {
+    font-size: 0.5rem;
+  }
+
+  .project-number {
+    display: none;
+  }
+
+  .internships h1{
+    top: 200px;
+    left: 10px;
+  }
+
+  .intern1, .intern2 {
+    width: 90%; /* Full width for small screens */
+    margin: 10px auto; /* Centered on the screen */
+    position: relative; /* Relative positioning for better flexibility */
     top: auto;
-    position: relative;
-    left: 0;
-    margin-top: 20px;
-    width: 100%;
+    left: auto;
+  }
+
+  .intern1 {
+    margin-top: 20px; /* Add spacing */
+    top: 80px;
+  }
+
+  .intern2 {
+    margin-top: 20px; /* Add spacing */
+    top: 100px;
+  }
+
+  .intern-info h3 {
+    font-size: 0.5rem; /* Smaller heading for better fit */
+  }
+
+  .intern-info p {
+    font-size: 0.3rem; /* Adjust paragraph text size */
+  }
+
+  .intern-image img {
+    width: 100px;
+    height: 100px;
   }
 }
 
 /* Small devices (tablets, less than 768px) */
 @media (max-width: 768px) {
   .logo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     left: 20px;
   }
 
