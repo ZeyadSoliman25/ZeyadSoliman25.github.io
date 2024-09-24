@@ -331,26 +331,6 @@ nav ul li a:hover {
   -ms-animation: fadeIn 5s;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  nav ul li {
-    margin-bottom: 10px; /* Space out links */
-  }
-
-  .welcome-area h1 {
-    font-size: 2rem; /* Smaller font size for smaller screens */
-  }
-
-  .welcome-area p {
-    font-size: 1rem; /* Smaller font size for smaller screens */
-  }
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -393,5 +373,155 @@ nav ul li a:hover {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* Extra small devices (phones, less than 600px) */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.5rem; /* Smaller font size */
+    left: 20px; /* Adjusted positioning */
+  }
+
+  nav {
+    width: 100%; /* Full width for phones */
+    left: 0;
+    padding-top: 10px;
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack menu vertically */
+    padding: 10px;
+  }
+
+  nav ul li {
+    margin-bottom: 10px; /* Add space between links */
+  }
+
+  .welcome-area h1 {
+    font-size: 1.8rem; /* Smaller heading for small screens */
+  }
+
+  .welcome-area p {
+    font-size: 1rem; /* Smaller paragraph text */
+  }
+
+  .profile-pic img {
+    top: 150px;
+    left: 50px;
+    width: 200px; /* Adjusted image size */
+    height: 200px;
+  }
+
+  .project-item1, .project-item2, .project-item3, .project-item4 {
+    width: 90%; /* Full width for projects on small screens */
+    left: 5%;
+    top: auto;
+    position: relative;
+    margin: 20px auto;
+  }
+
+  .more-projects {
+    top: auto;
+    position: relative;
+    left: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+/* Small devices (tablets, less than 768px) */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2rem;
+    left: 20px;
+  }
+
+  nav {
+    width: 100%;
+    left: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .profile-pic img {
+    top: 180px;
+    left: 30px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .project-item1, .project-item2, .project-item3, .project-item4 {
+    width: 80%;
+    left: 10%;
+    top: auto;
+    position: relative;
+    margin: 15px auto;
+  }
+
+  .more-projects {
+    top: auto;
+    left: 0;
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
+/* Medium devices (laptops, less than 1024px) */
+@media (max-width: 1024px) {
+  .logo {
+    font-size: 2.5rem;
+    left: 30px;
+  }
+
+  nav {
+    width: 100%;
+    left: 0;
+  }
+
+  nav ul {
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .profile-pic img {
+    top: 200px;
+    left: 50px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .project-item1, .project-item2, .project-item3, .project-item4 {
+    width: 45%;
+    left: auto;
+    margin: 15px auto;
+    position: relative;
+  }
+
+  .more-projects {
+    top: 500px;
+    left: auto;
+  }
+}
+
+/* For extra-large screens (desktops larger than 1440px) */
+@media (min-width: 1440px) {
+  .welcome-area h1 {
+    font-size: 3rem;
+  }
+
+  .profile-pic img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .project-item1, .project-item2, .project-item3, .project-item4 {
+    width: 40%;
+  }
+
+  .more-projects {
+    top: 600px;
   }
 }
