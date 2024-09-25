@@ -100,6 +100,25 @@ nav ul li a:hover {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.download-CV {
+  display: block;
+  background: #68af4c;
+  color: white;
+  text-decoration: none;
+  padding: 20px 20px;
+  margin-top: 5px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+  text-align: center;
+  position: fixed;
+  top: 600px;
+  left: 590px;
+}
+
+.download-CV:hover {
+  background: #3a8b5e57; /* Darker green on hover */
+}
+
 .content-section {
   opacity: 0;
   transition: opacity 0.5s ease-in;
@@ -305,12 +324,6 @@ nav ul li a:hover {
   font-size: 1rem;
 }
 
-.arrow {
-  position: fixed;
-  top: 300px;
-  left: 520px;
-}
-
 .intern2 {
   margin: 10px 0px;
   width: 40%;
@@ -328,16 +341,6 @@ nav ul li a:hover {
   height: 200px;
   border-radius: 50%;
 }
-
-/*
-.education{
-  width: 90%;
-  margin: 20px auto;
-  color: white;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}*/
 
 .education.active {
   display: block;
@@ -386,6 +389,131 @@ span.single-timeline-horizontal {
   width: 380px;
 }
 span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
+
+.skills {
+  width: 80%;
+  margin: 20px auto;
+  color: white;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.skills h1 {
+  position: fixed;
+  top: 100px;
+  left: 50px;
+}
+
+.skills.active {
+  display: block;
+  opacity: 1;
+}
+
+.skill-item1 {
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  margin: 10px 0px;
+  width: 46%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  position: fixed;
+  top: 200px;
+  left: 40px;
+}
+
+.skill-item1:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+}
+
+.skill-item2 {
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  margin: 10px 0;
+  width: 46%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  position: fixed;
+  top: 200px;
+  left: 750px;
+}
+
+.skill-item2:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+}
+
+.skill-item3 {
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  margin: 10px 0;
+  width: 46%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  position: fixed;
+  top: 400px;
+  left: 40px;
+}
+
+.skill-item3:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+}
+
+.skill-item4 {
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  margin: 10px 0;
+  width: 46%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  position: fixed;
+  top: 400px;
+  left: 750px;
+}
+
+.skill-item4:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+}
+
+.skill-number {
+  background: #68af4c; /* White circle background */
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+  font-size: 1.5rem;
+  position: relative;
+  top: 50px;
+  left: 5px;
+}
+
+.skill-info h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.skill-info p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.certifcates {
+  display: block;
+  background: #68af4c;
+  color: white;
+  text-decoration: none;
+  padding: 20px 20px;
+  margin-top: 5px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+  text-align: center;
+  position: fixed;
+  top: 600px;
+  left: 590px;
+}
+
+.certifcates:hover {
+  background: #3a8b5e57; /* Darker green on hover */
+}
 
 .fade-in-content {
   animation: fadeIn 5s;
@@ -589,6 +717,69 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
   .educate2 {display: none;}
   .educate3 {display: none;}
+
+  .skills {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 0 auto; /* Centered */
+    padding: 20px; /* Add padding for spacing */
+  }
+
+  .skills h1 {
+    position: relative;
+    top: 10px;
+    left: 0; /* Center title on small screens */
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .skill-item1, .skill-item2, .skill-item3, .skill-item4 {
+    width: 90%; /* Full width for project items */
+    position: relative; /* Relative positioning for better control */
+    top: auto;
+    left: auto;
+    margin: 15px auto; /* Center and add spacing between items */
+  }
+
+  .skill-item1 {
+    margin-top: 40px; /* Add some space at the top */
+  }
+
+  /* Stack items vertically */
+  .skill-item2, .skill-item3, .skill-item4 {
+    margin-top: 15px; /* Vertical spacing between project items */
+  }
+
+  .certifcates {
+    display: contents;
+    width: 90%; /* Full width for the button */
+    top: 50px;
+    left: auto;
+    margin: 5px auto; /* Add margin to center and space it out */
+    block-size: 5px;
+    border-width: 5px;
+  }
+
+  .skill-info h3 {
+    font-size: 0.7rem;
+  }
+  
+  .skill-info p {
+    font-size: 0.5rem;
+  }
+
+  .skill-number {
+    display: none;
+  }
+
+  .download-CV {
+    display: contents;
+    width: 90%; /* Full width for the button */
+    top: 50px;
+    left: auto;
+    margin: 5px auto; /* Add margin to center and space it out */
+    block-size: 5px;
+    border-width: 5px;
+  }
 }
 
 /* Small devices (tablets, less than 768px) */
