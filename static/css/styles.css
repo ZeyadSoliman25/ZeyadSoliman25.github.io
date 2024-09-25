@@ -112,8 +112,8 @@ nav ul li a:hover {
 
 .content-section h1 {
   position: relative;
-  top: -80px;
-  left: 250px;
+  top: 120px;
+  left: 200px;
   color: white;
   font-size: 2.5rem;
   text-align: center;
@@ -122,19 +122,11 @@ nav ul li a:hover {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.flex-container {
-  display: flex;
-  flex-flow: row wrap;
-  position: absolute;
-  top: 0px;
-  left:50px;
-}
-
 .about-info p {
-  width: 60%;
   position: relative;
-  top: -50px;
-  left: 520px;
+  top: 120px;
+  left: 120px;
+  width: 60%;
   color: white;
   font-size: 1.2rem;
   text-align: center;
@@ -144,9 +136,7 @@ nav ul li a:hover {
 
 .profile-pic img {
   position: relative;
-  top: 200px;
-  width: 35%; /* Adjust according to your preference */
-  height: 35%;
+  left: 50px;
   border-radius: 50%; /* Circular image */
 }
 
@@ -423,22 +413,22 @@ nav ul li a:hover {
   }
 
   .content-section h1 {
-    font-size: 0.8rem;
-  }
-
-  .flex-container {
-    height: 200px;
-    width: 200px;
+    top: 20px;
+    left: 5px;
+    font-size: 1rem;
   }
 
   .about-info p{
-    width: 40%;
-    font-size: 0.5rem;
+    top: 20px;
+    left: 65px;
+    width: 60%;
+    font-size: 0.8rem;
   }
 
-  .profile-pic {
-    flex-shrink: 100;
+  .profile-pic img {
+   display: none; 
   }
+
 
   .selected-projects {
     width: 90%; /* Adjust width for smaller screens */
