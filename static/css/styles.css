@@ -329,6 +329,64 @@ nav ul li a:hover {
   border-radius: 50%;
 }
 
+/*
+.education{
+  width: 90%;
+  margin: 20px auto;
+  color: white;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}*/
+
+.education.active {
+  display: block;
+  opacity: 1;
+}
+
+.education {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  padding-top:  50px;
+  color: white;
+}
+
+.section-heading h2 {color: white; position: absolute; top: 100px; left: 650px;}
+
+.education-horizontal-timeline {
+  padding: 80px 0;
+}
+
+/*.education-horizontal-timeline*/
+.education-horizontal-timeline .col-sm-4 {padding:0 2px;}
+
+.single-horizontal-timeline .experience-time h3{text-transform: capitalize; color: white;}
+.single-horizontal-timeline .experience-time h2{color: white;}
+.single-horizontal-timeline .timeline-content h4{color: white;}
+.single-horizontal-timeline .experience-time h3 span{text-transform:lowercase; color: white;}
+.single-horizontal-timeline .timeline-content h5 {margin: 15px 0; color: white;}
+.single-horizontal-timeline p {color: white;max-width: 335px;}
+
+/*.timeline-horizontal-border*/
+.timeline-horizontal-border {
+  display:  flex;
+  align-items: center;
+  padding: 26px 0 30px;
+}
+.timeline-horizontal-border i {
+  font-size:  10px;
+  color: #2cf93a;
+  margin-right:  5px;
+}
+span.single-timeline-horizontal {
+  display:  inline-block;
+  background: #f5f6f8;
+  height:  1px;
+  width: 380px;
+}
+span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
+
 .fade-in-content {
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
@@ -518,6 +576,19 @@ nav ul li a:hover {
     width: 100px;
     height: 100px;
   }
+
+  .educate1 {width: 70%; position: absolute; top: 250px; left: 50px}
+  .educate1 p{
+    font-size: 0.6rem;
+  }
+
+  .educate1 h2 {font-size: 0.9rem;}
+  .educate1 h3 {font-size: 0.8rem;}
+  .educate1 h4 {font-size: 0.7rem;}
+  .educate1 h5 {font-size: 0.6rem;}
+
+  .educate2 {display: none;}
+  .educate3 {display: none;}
 }
 
 /* Small devices (tablets, less than 768px) */

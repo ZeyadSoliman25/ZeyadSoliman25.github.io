@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll('.content-section .selected-projects');
+    const sections = document.querySelectorAll('.content-section .selected-projects .internships .education');
     const navLinks = document.querySelectorAll('nav ul li a');
 
     function changeSection(newActiveLink) {
