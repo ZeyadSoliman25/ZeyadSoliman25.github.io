@@ -515,6 +515,70 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
   background: #3a8b5e57; /* Darker green on hover */
 }
 
+.contacts {
+  width: 80%;
+  margin: 20px auto;
+  color: white;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.contacts h1 {
+  font-size: 2rem;
+  position: fixed;
+  top: 100px;
+  left: 650px;
+}
+
+.contacts.active {
+  display: block;
+  opacity: 1;
+}
+
+.contact1 {
+  margin: 10px 0px;
+  width: 40%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  text-align: center;
+  position: fixed;
+  top: 200px;
+  left: 40px;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: white;
+}
+
+.contact-info a{
+  text-decoration: none;
+}
+
+.contact2 {
+  margin: 10px 0px;
+  width: 40%;
+  padding: 0px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  text-align: center;
+  position: fixed;
+  top: 200px;
+  left: 800px;
+}
+
+.contact-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
 .fade-in-content {
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
@@ -779,6 +843,42 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     margin: 5px auto; /* Add margin to center and space it out */
     block-size: 5px;
     border-width: 5px;
+  }
+
+  .contacts h1{
+    top: 200px;
+    left: 10px;
+  }
+
+  .contact1, .contact2 {
+    width: 90%; /* Full width for small screens */
+    margin: 10px auto; /* Centered on the screen */
+    position: relative; /* Relative positioning for better flexibility */
+    top: auto;
+    left: auto;
+  }
+
+  .contact1 {
+    margin-top: 20px; /* Add spacing */
+    top: 80px;
+  }
+
+  .contact2 {
+    margin-top: 20px; /* Add spacing */
+    top: 100px;
+  }
+
+  .contact-info h3 {
+    font-size: 0.8rem; /* Smaller heading for better fit */
+  }
+
+  .contact-info p {
+    font-size: 0.6rem; /* Adjust paragraph text size */
+  }
+
+  .contact-image img {
+    width: 100px;
+    height: 100px;
   }
 }
 
