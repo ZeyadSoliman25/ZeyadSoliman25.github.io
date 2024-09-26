@@ -111,7 +111,7 @@ nav ul li a:hover {
   transition: background 0.3s ease;
   text-align: center;
   position: fixed;
-  top: 600px;
+  top: 550px;
   left: 590px;
 }
 
@@ -198,7 +198,7 @@ nav ul li a:hover {
 .project-item2 {
   background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
   margin: 10px 0;
-  width: 46%;
+  width: 42%;
   padding: 0px;
   border-radius: 10px;
   transition: background 0.3s ease;
@@ -230,7 +230,7 @@ nav ul li a:hover {
 .project-item4 {
   background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
   margin: 10px 0;
-  width: 46%;
+  width: 42%;
   padding: 0px;
   border-radius: 10px;
   transition: background 0.3s ease;
@@ -276,7 +276,7 @@ nav ul li a:hover {
   transition: background 0.3s ease;
   text-align: center;
   position: fixed;
-  top: 600px;
+  top: 550px;
   left: 590px;
 }
 
@@ -429,7 +429,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .skill-item2 {
   background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
   margin: 10px 0;
-  width: 46%;
+  width: 42%;
   padding: 0px;
   border-radius: 10px;
   transition: background 0.3s ease;
@@ -461,7 +461,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .skill-item4 {
   background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
   margin: 10px 0;
-  width: 46%;
+  width: 42%;
   padding: 0px;
   border-radius: 10px;
   transition: background 0.3s ease;
@@ -507,7 +507,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
   transition: background 0.3s ease;
   text-align: center;
   position: fixed;
-  top: 600px;
+  top: 550px;
   left: 590px;
 }
 
